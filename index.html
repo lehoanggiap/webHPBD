@@ -436,14 +436,25 @@
       <div class="container-fluid text-center text-md-left">
         <h3 align="center" style="color: #fff; overflow-y: hidden; font-family: 'Indie Flower', cursive;"> Made With <span><i class="em em-heartpulse"></i></span> by BAN HT.</h3>
       </div>
-      <iframe src="https://www.youtube.com/embed/u7wJDQnTla4?autoplay=1" style="display:block; opacity: 0;" id="iframeAudio">
+      <iframe src="https://www.youtube.com/embed/u7wJDQnTla4?autoplay=1&start=4&loop=1&playlist=u7wJDQnTla4" allow="autoplay" style="display:block; opacity: 0; height: 0; width: 0;" id="iframeAudio">
       </iframe> 
-      <!-- <audio autoplay loop src="img/Happy Birthday in English Guitar 11 - www.beatdreamer.com.mp3" type="audio/mpeg" id="playAudio">
-
-      </audio> -->
+      <video width="1024" height="600" controls style="position: relative; top: 0; left: 50%; transform: translateX(-50%);" id="videoHPBD">
+        <source src="img/clip.mp4" type="video/mp4">
+      </video>
     </footer>
     <br>
     <br>
+
+    <script>
+      video = document.getElementById('iframeAudio');
+      video2 = document.getElementById('videoHPBD');
+      console.log([video2])
+      video2.onplay =  function() {
+        video.src = "";
+      };
+
+    </script>
+    
     
     <!-- scrollReveal.js -->
    <script src="main.js">
@@ -451,6 +462,8 @@
     chat = document.getElementsByClassName('col-lg-12');
 
     console.log(chat);
+
+    
 
 
     </script>
